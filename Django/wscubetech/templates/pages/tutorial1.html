@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+
+
+<section>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom bg-light">Start Lerning</div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+        </div>
+    </div>
+
+
+    
+        <!-- END Sidebar-->
+
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation with toggle button-->
+            <div class="container-fluid">
+                <button class="btn btn-primary" id="sidebarToggle">Click to hide Menu</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                
+                <!-- Source video for learning -->
+                <div class="ratio  ratio-16x9 ms-auto" style="--bs-aspect-ratio: 56%;">
+                    <iframe src="http://www.youtube.com/embed/nIsCs9_-LP8" title="YouTube video" allowfullscreen></iframe>
+                  </div>
+                <!-- End of Source video for learning -->
+
+            </div>
+        
+        <!-- End Top navigation with toggle button-->
+    </div>
+   
+</div>
+</section>
+
+
+
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="/static/js/scripts.js"></script>

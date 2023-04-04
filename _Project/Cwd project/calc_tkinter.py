@@ -1,0 +1,23 @@
+from ctypes.wintypes import RGB
+from platform import freedesktop_os_release
+from tkinter import *
+win = Tk()
+a = win.title('Calc')
+b = win.geometry('400x600')
+frame=Frame(win,bg='black',border=30,padx=50).place(x=350)
+b7 = Button(text='7',height=3,width=6).grid(row = 1,column = 1)
+b8 = Button(text='8',height=3,width=6).grid(row = 1,column = 2)
+b9 = Button(text='9',height=3,width=6).grid(row = 1,column = 3)
+b4 = Button(text='4',height=3,width=6).grid(row = 2,column = 1)
+b5 = Button(text='5',height=3,width=6).grid(row = 2,column = 2)
+b6 = Button(text='6',height=3,width=6).grid(row = 2,column = 3)
+b1 = Button(text='1',height=3,width=6).grid(row = 3,column = 1)
+b2 = Button(text='2',height=3,width=6).grid(row = 3,column = 2)
+b3 = Button(text='3',height=3,width=6).grid(row = 3,column = 3)
+b0 = Button(text="0",height=3,width=6).grid(row = 4,column = 1)
+bAdd = Button(text="+",height=3,width=6).grid(row = 4,column=2)
+bSub = Button(text="-",height=3,width=6).grid(row = 4,column=3)
+bMulti = Button(text="x",height=3,width=6).grid(row = 3,column=4)
+bDiv = Button(text="/",height=3,width=6).grid(row = 4,column=4)
+bEqual = Button(text="=",height=3,width=6).grid(row = 2,column=4)
+win.mainloop()
