@@ -1,10 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from Subjects.models import Subjects
+from Video.models import Video
 def aboutus(request):
     return HttpResponse('Welcome to wscube tech')
 
-def tutorial(request):
-    return render(request, 'pages/tutorial.html', {'navbar': 'tutorial'})
+def subject(request):
+    subjectData=Subjects.objects.all()
+    subData = {
+        'subjectData':subjectData
+    } 
+    return render(request, 'pages/subject.html',subData)
+
 
 def aboutus(request):
     return render(request,'pages/aboutus.html', {'navbar': 'aboutus'})
@@ -15,5 +22,6 @@ def homepage(request):
     }
     return render(request,'index.html',data)
 
-def tutorial1(request):
-    return render(request, 'pages/tutorial1.html')
+def tutorial(request):
+    videoData=Video.objects.all()
+    return render(request, 'pages/tutorial.html')

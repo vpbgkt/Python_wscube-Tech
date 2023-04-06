@@ -8,3 +8,4 @@ class Subjects(models.Model):
 
     def __str__(self):
         return self.subject_name
+    
