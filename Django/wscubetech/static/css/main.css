@@ -26,6 +26,14 @@ body {
     overflow-x: hidden;
   }
   
+  /* footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color: #1bdda6;
+} */
+  
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
