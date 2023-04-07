@@ -22,6 +22,10 @@ def homepage(request):
     }
     return render(request,'index.html',data)
 
+
 def tutorial(request):
     videoData=Video.objects.all()
-    return render(request, 'pages/tutorial.html')
+    Data = {
+        'videoData':videoData
+        }
+    return render(request, 'pages/tutorial.html',Data)
