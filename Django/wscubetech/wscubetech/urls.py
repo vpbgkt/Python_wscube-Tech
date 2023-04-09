@@ -22,12 +22,6 @@ urlpatterns = [
     path('', views.homepage),
     path('aboutus/', views.aboutus, name='aboutus'),
     path('subject/', views.subject, name='subject'),
-    path('subject/tutorial/', views.tutorial, name='subject'),
-    path('subject/<int:subject_id>/', views.subject_videos, name='subject_videos'),
-
+    path('subject/<subject_id>/', views.subject_videos, name='subject_videos'),
 
 ]
-
-
-
-    # path('courses/<int:courseid>', views.courseDetails),
