@@ -3,19 +3,17 @@
 
 <section>
 <div class="d-flex" id="wrapper">
-    <!-- Sidebar-->
+    <!--______________ Sidebar_______________________-->
     <div class="border-end bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading border-bottom bg-light">Start Lerning</div>
         <div class="list-group list-group-flush">
-            {%for i in videoData%}
+            {%for i in videos%}
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{{i.title}}</a>
             {% endfor%}
         </div>
     </div>
 
-
-    
-        <!-- END Sidebar-->
+        <!--- _____END Sidebar_______________________-->
 
     <!-- Page content wrapper-->
     <div id="page-content-wrapper">
@@ -24,7 +22,7 @@
                 <button class="btn btn-primary" id="sidebarToggle">Click to hide Menu</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 
-                <!-- Source video for learning -->
+                <!-- Source learning video  -->
                 <div class="ratio  ratio-16x9 ms-auto" style="--bs-aspect-ratio: 56%;">
                     <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="YouTube video" allowfullscreen></iframe>
                 </div>
