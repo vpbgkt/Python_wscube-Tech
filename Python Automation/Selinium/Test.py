@@ -1,7 +1,12 @@
-dict = {
-    'subjectData': <QuerySet
-    [<Subjects: sub1>,
-    <Subjects: sub2>,
-    <Subjects: sub3>,
-    <Subjects: sub4>]
->}
+from tkinter import *
+
+win = Tk()
+win.geometry("1370x730")
+win.title("CarRental")
+win.config(bg="#424949")
+
+img = PhotoImage(name="rr",file="rr.png")
+lbl_img1=Label(win,image=img)
+lbl_img1.pack()
+
+win.mainloop()

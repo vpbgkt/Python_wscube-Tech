@@ -36,6 +36,9 @@ def subject(request):
 def subject_videos(request, subject_id):
     subject = get_object_or_404(Subjects, pk=subject_id)
     videos = Video.objects.filter(Subjects=subject)
-    context = {'subject': subject, 'videos': videos}
+    video_urls = [video.video_url for video in videos if video.video_url]  # fetch the video_url of each Video object
+    context = {'subject': subject, 'videos': videos, 'video_urls': video_urls}
+    print(context['video_urls'][0])
     
     return render(request, 'pages/subjectvideos.html', context)
+

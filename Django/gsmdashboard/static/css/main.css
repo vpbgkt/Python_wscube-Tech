@@ -1,5 +1,5 @@
 body {
-    background-image: url('/static/images/pexels.jpg');
+    background-image: url('/static/images/pxfuel.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     
@@ -19,20 +19,20 @@ body {
 
   nav {
     backdrop-filter: blur(5px);
-    background-color: rgb(44, 109, 105) !important;
+    background-color: rgb(0, 122, 131) !important;
     border: 40px;
   }
   #wrapper {
     overflow-x: hidden;
   }
   
-  /* footer {
+  footer {
     position: fixed;
     height: 100px;
     bottom: 0;
     width: 100%;
     background-color: #1bdda6;
-} */
+}
   
   #sidebar-wrapper {
     min-height: 100vh;
