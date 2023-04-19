@@ -1,9 +1,9 @@
-{% include 'header.html' %}
+{% include 'pages/header.html' %}
 
 {% comment %} Cards start Here {% endcomment %}
 
 <section>
-  {%for i  in subjectData%}
+  {%for i  in subjects%}
   <div class="card mb-3" style="max-width: 500px;">
         <a href="http://127.0.0.1:8000/subject/{{forloop.counter}}">
         <div class="row g-0">
@@ -23,7 +23,7 @@
     {% endfor %}
   </div>
 </section>
-
+{% include 'pages/footer.html' %}
 {% comment %} End of card section {% endcomment %}
 {% comment %} 
 

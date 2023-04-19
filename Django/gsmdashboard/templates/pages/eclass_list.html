@@ -1,0 +1,37 @@
+{% include 'pages/header.html' %}
+
+
+{%for i  in eclasses%}
+<section>
+  <a href="{{i}}" style="color: red; text-decoration: none;">
+  <div class="card-container">
+        <div class="card">
+          <div class="card-details">
+            <p class="text-title">{{i}}</p>
+            <p class="text-body">{{i.subject_description}}</p>
+          </div>
+          <button class="card-button">{{i}}</button>
+        </div>
+      </div>
+      </a>
+    </section>
+    
+    {% endfor %}
+
+<section >
+    {% include 'pages/footer.html' %}
+</section>
+
+
+</body>
+</html>
+
+
+{% comment %} 
+Notes -  {{request.path}} - Used to print the path on website;
+
+2. {% url 'home' as url %} #alias url can be same
+class = "{% if request.path == url %} active {% endif %} 
+
+3. onmouseover / onmouseout is used to stop or play marque by mouse hover
+{% endcomment %}

@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render , get_object_or_404
 from Subjects.models import Subjects
 from Video.models import Video
+from Eclass.models import Eclass
 
 
 def aboutus(request):
@@ -14,13 +15,13 @@ def homepage(request):
     return render(request,'index.html',data)
 
 
-def subject(request):
-    subjectData=Subjects.objects.all()
-    subData = {
-        'subjectData':subjectData
-    } 
-    # print(subData)
-    return render(request, 'pages/subject.html',subData)
+# def subject(request):
+#     subjectData=Subjects.objects.all()
+#     subData = {
+#         'subjectData':subjectData
+#     } 
+#     # print(subData)
+#     return render(request, 'pages/subject.html',subData)
 
 
 
@@ -31,6 +32,12 @@ def subject(request):
 #         }
 #     return render(request, 'pages/videos.html',Data)
 
+def eclass_list(request):
+    eclasses = Eclass.objects.all()
+    print(eclasses)
+    context = {'eclasses': eclasses}
+    
+    return render(request, 'pages/eclass_list.html', context)
 
 
 def subject_videos(request, subject_id):
@@ -42,3 +49,20 @@ def subject_videos(request, subject_id):
     
     return render(request, 'pages/subjectvideos.html', context)
 
+def subject(request, class_name):
+    eclass = get_object_or_404(Eclass, name=class_name)
+    subjects = Subjects.objects.filter(eclass=eclass)
+    if subjects:
+        print('this if is exicuted')
+        context = {'eclass': eclass, 'subjects': subjects}
+        print(subjects)
+        return render(request, 'pages/subject.html', context)
+    else:
+        print('this else is exicuted')
+
+        context = {'eclass': eclass}
+        return render(request, 'pages/no_subjects.html', context)
+    
+
+def contect(request):
+    return render(request,'pages/contect.html')
