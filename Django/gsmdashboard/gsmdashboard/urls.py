@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gsmdashboard import views
+from gsmdashboard import settings, views
+from django.conf.urls.static import static 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,8 +28,4 @@ urlpatterns = [
     # path('eclass_list/<int:eclass_id>/', name='subjects'),
     path('eclass_list/<str:class_name>/',views.subject, name='eclass_list'),
     path('contect/', views.contect, name='contect'),
-
-
-
-
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # New

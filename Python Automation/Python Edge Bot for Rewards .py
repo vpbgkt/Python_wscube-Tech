@@ -29,15 +29,15 @@ for i in range(0, WebSearch): #for desktop search
     HotKey('ctrl', 'l')
     pyautogui.typewrite(f"{i} Reward Search")
     key('enter')
-    wait(1)
+    wait(2)
 HotKey('win', 'up')
 HotKey('ctrl', 'shift', 'j')
 
-wait(1)
+wait(2)
 key('tab')
 HotKey('ctrl', 'l')
 for i in range(0, MobileSearch+1): #for mobile search
     HotKey('ctrl', 'l')
     pyautogui.typewrite(f"{i} edge browser Mobile Reward Search")
     key('enter')
-    wait(1)
+    wait(2)

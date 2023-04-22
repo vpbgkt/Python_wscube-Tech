@@ -1,27 +1,22 @@
 {% include 'pages/header.html' %}
 
-
-{%for i  in eclasses%}
-<section>
-  <a href="{{i}}" style="color: red; text-decoration: none;">
-  <div class="card-container">
-        <div class="card">
-          <div class="card-details">
-            <p class="text-title">{{i}}</p>
-            <p class="text-body">{{i.subject_description}}</p>
-          </div>
-          <button class="card-button">{{i}}</button>
+<div class="card-container">
+  {% for i in eclasses %}
+    <a href="{{i}}" style="color: red; text-decoration: none;">
+      <div class="card">
+        <div class="card-details">
+          <p class="text-title">{{i}}</p>
+          <p class="text-body">{{i.subject_description}}</p>
         </div>
+        <button class="card-button">{{i}}</button>
       </div>
-      </a>
-    </section>
-    
-    {% endfor %}
+    </a>
+  {% endfor %}
+</div>
 
-<section >
-    {% include 'pages/footer.html' %}
+<section>
+  {% include 'pages/footer.html' %}
 </section>
-
 
 </body>
 </html>

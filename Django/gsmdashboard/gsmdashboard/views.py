@@ -34,7 +34,6 @@ def homepage(request):
 
 def eclass_list(request):
     eclasses = Eclass.objects.all()
-    print(eclasses)
     context = {'eclasses': eclasses}
     
     return render(request, 'pages/eclass_list.html', context)
@@ -45,7 +44,6 @@ def subject_videos(request, subject_id):
     videos = Video.objects.filter(Subjects=subject)
     video_urls = [video.video_url for video in videos if video.video_url]  # fetch the video_url of each Video object
     context = {'subject': subject, 'videos': videos, 'video_urls': video_urls}
-    print(context['video_urls'][0])
     
     return render(request, 'pages/subjectvideos.html', context)
 
@@ -53,12 +51,9 @@ def subject(request, class_name):
     eclass = get_object_or_404(Eclass, name=class_name)
     subjects = Subjects.objects.filter(eclass=eclass)
     if subjects:
-        print('this if is exicuted')
         context = {'eclass': eclass, 'subjects': subjects}
-        print(subjects)
-        return render(request, 'pages/subject.html', context)
+        return render(request, 'pages/subjects.html', context)
     else:
-        print('this else is exicuted')
 
         context = {'eclass': eclass}
         return render(request, 'pages/no_subjects.html', context)
